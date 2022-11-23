@@ -9,7 +9,7 @@ install: ## Install the application
 	${DOCKER_COMPOSE} pull
 
 start: ## Start the application
-	${DOCKER_COMPOSE} up -d
+	${DOCKER_COMPOSE} up
 
 stop: ## Stop the application
 	${DOCKER_COMPOSE} down
