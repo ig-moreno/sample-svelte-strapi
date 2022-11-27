@@ -1,11 +1,19 @@
 version: "3"
 services:
-  backend:
+  strapi:
     image: strapi/strapi
     volumes:
-      - ./backend:/srv/app
+      - ./strapi:/srv/app
     ports:
       - "1337:1337"
+
+  backend:
+    volumes:
+      - .:/app
+    working_dir: "/app/backend"
+    command: yarn dev
+    ports:
+      - "3000:3000"
   
   frontend:
     image: node:16.0.0-stretch
@@ -18,4 +26,5 @@ services:
     ports:
       - "5173:5173"
     depends_on:
+      - strapi
       - backend

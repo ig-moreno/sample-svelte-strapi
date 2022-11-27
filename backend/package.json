@@ -1,37 +1,16 @@
 {
-  "name": "app",
-  "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A backend service for sample-svelte-strapi",
+  "main": "index.js",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "build": "npm i",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "strapi": "3.0.0-beta.19.3",
-    "strapi-admin": "3.0.0-beta.19.3",
-    "strapi-utils": "3.0.0-beta.19.3",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.19.3",
-    "strapi-plugin-content-manager": "3.0.0-beta.19.3",
-    "strapi-plugin-users-permissions": "3.0.0-beta.19.3",
-    "strapi-plugin-email": "3.0.0-beta.19.3",
-    "strapi-plugin-upload": "3.0.0-beta.19.3",
-    "strapi-connector-bookshelf": "3.0.0-beta.19.3",
-    "knex": "<0.20.0",
-    "sqlite3": "latest"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "7c5fedf5-a7c7-4961-8340-4538a13f96fe"
-  },
-  "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+    "express": "^4.18.2"
+  }
 }
