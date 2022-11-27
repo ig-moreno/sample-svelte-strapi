@@ -8,21 +8,18 @@ services:
       - "1337:1337"
 
   backend:
+    build: ./backend
     volumes:
       - .:/app
-    working_dir: "/app/backend"
-    command: yarn dev
     ports:
       - "3000:3000"
   
   frontend:
-    image: node:16.0.0-stretch
+    build: ./frontend
     volumes:
       - .:/app
     environment:
       - API_BASEURL=http://localhost:1337
-    working_dir: "/app/frontend"
-    command: yarn dev
     ports:
       - "5173:5173"
     depends_on:
